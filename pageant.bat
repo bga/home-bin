@@ -1,0 +1,1 @@
+D:\putty\PAGEANT.EXE "I:\!Main\GnuPG\bga.email@gmail.com.ppk"

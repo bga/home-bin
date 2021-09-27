@@ -1,0 +1,1 @@
+call ruby.bat e:\bin\uploadImage.rb "%~1"

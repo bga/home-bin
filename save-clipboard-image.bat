@@ -1,0 +1,1 @@
+%~d0\p\!tools\save-clipboard-image\save-clipboard-image.exe %*

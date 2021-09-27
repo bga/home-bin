@@ -1,0 +1,1 @@
+\p\jsdb\jsdb.exe -jit \p\safejs\jsdb\loader.jsdb.js %*

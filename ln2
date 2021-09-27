@@ -1,0 +1,23 @@
+#!/bin/sh
+if [ "$#" -eq 2 -a "$1" == "-s" ]; then
+    TARGET="$2"
+    LINK=$(basename "$TARGET")
+elif [ "$#" -eq 3 -a "$1" == "-s" ]; then
+    TARGET="$2"
+    LINK="$3"
+else
+    echo "this weak implementation only supports \`ln -s\`"
+    exit
+fi
+
+if [ -d "$TARGET" ]; then
+    MKLINK_OPTS="//d"
+fi
+
+TARGET=$(cygpath -w -a "$TARGET")
+LINK=$(cygpath -w -a "$LINK")
+
+echo "$TARGET"
+echo "$LINK"
+# cmd.exe //c echo 1  
+cmd.exe //c mklink $MKLINK_OPTS "$LINK" "$TARGET" \& exit  
