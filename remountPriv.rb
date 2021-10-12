@@ -1,10 +1,10 @@
 newPrivDriveLetter = nil
 oldPrivDriveLetter = nil
 if(ARGV.size == 2)
-  oldPrivDriveLetter = ARGV[0].gsub("\\", "/").upcase
-  newPrivDriveLetter = ARGV[1].gsub("\\", "/").upcase
+	oldPrivDriveLetter = ARGV[0].gsub("\\", "/").upcase().chomp("/") + "/"
+	newPrivDriveLetter = ARGV[1].gsub("\\", "/").upcase.chomp("/") + "/"
 else
-  newPrivDriveLetter = ARGV[0].gsub("\\", "/").upcase
+	newPrivDriveLetter = ARGV[0].gsub("\\", "/").upcase.chomp("/") + "/"
 end
 
 # require "FileUtils"
