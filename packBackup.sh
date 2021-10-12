@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 displayUsage() {
 	echo -e "$0 ACTION sourceDir backupDir"
 	echo -e "create sourceDir backupDir"

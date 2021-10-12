@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 srcDir=$1 
 srcDir=${srcDir%/} 
 # srcDir

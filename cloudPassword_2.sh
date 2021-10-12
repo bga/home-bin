@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 # outputStream=" 1>&2"
 outputStream=" "
 if [[ $1 == "--clipboard" ]]; then

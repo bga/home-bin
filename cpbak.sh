@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu -o pipefail
 
 displayUsage() {
 	echo -e "$0 FILE"

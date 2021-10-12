@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 IN_F=$1
 OUT_F=${2:-$IN_F-eeprom.bin} 
 echo "$OUT_F" 

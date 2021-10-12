@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu -o pipefail
 
 URL="http://0x0.st"
 

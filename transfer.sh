@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 fileToUpload=$1
 shift
 # fileToUploadUnixPath="`cygpath -u ${fileName}`"

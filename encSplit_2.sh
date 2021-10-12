@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 file=$1
 password=$(cloudPassword_2.sh backup)
 # password=1234

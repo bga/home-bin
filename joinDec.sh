@@ -1,3 +1,6 @@
+#!/bin/sh
+set -eu -o pipefail
+
 spitFiles=$1
 outFile=$2
 password=$(cloudPassword.sh backup)
