@@ -187,8 +187,8 @@ elif [ $# -eq 2 ];  then
 		# TODO implement
 		# genRecoveryRecord "$image".split* &; pid1=$!
 		# saveHashSums "$image".split*; pid2=$!
-		wait $pid1
-		wait $pid2
+		# wait $pid1
+		# wait $pid2
 		log Done
 	elif [ "$cmdAction" == "diff" ]; then
 		# password=$(askPassword)
