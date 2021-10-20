@@ -17,6 +17,7 @@ hashPwd() {
 }
 
 cat ${spitFiles}* \
+	| (command -v pv &> /dev/null && pv -s $(du -csb ${spitFiles}* | tail -1 | awk '{print $1}') || cat) \
 	| gpg -d "--passphrase=$(hashPwd ${password}_camellia256)" 2> /dev/null \
 	| gpg -d "--passphrase=$(hashPwd ${password}_aes256)" 2> /dev/null \
 	| gpg -d "--passphrase=$(hashPwd ${password}_twofish)" 2> /dev/null \

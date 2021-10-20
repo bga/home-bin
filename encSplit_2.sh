@@ -14,6 +14,7 @@ hashPwd() {
 }
 
 cat $file \
+	| (command -v pv &> /dev/null && pv -s $(du -sb "$file" | awk '{print $1}') || cat) \
 	| gpg --batch --compress-algo none -c --cipher-algo twofish "--passphrase=$(hashPwd ${password}_twofish)" 2> /dev/null \
 	| gpg --batch --compress-algo none -c --cipher-algo aes256 "--passphrase=$(hashPwd ${password}_aes256)" 2> /dev/null \
 	| gpg --batch --compress-algo none -c --cipher-algo camellia256 "--passphrase=$(hashPwd ${password}_camellia256)" 2> /dev/null \
