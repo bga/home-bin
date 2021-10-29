@@ -6,9 +6,9 @@ if %1==--help goto :showHelp
 goto :action
 
 :showHelp
-  echo syncs d:\music and f:\music 
-  echo %~nx0 --dry-run d:\music f:\ ^| less
-  echo %~nx0 d:\music f:\
+  echo syncs d:\music\ and f:\music\ 
+  echo %~nx0 --dry-run d:\music\ f:\ ^| less
+  echo %~nx0 d:\music\ f:\
   echo !end folder should has same name
 goto :eof
 
