@@ -30,7 +30,7 @@ goto :eof
   call :convertToUnixPath %toDir%
   set toDirUnix=%ret%
   
-  rsync --recursive --human-readable --progress --perms --update --inplace --fuzzy --copy-links --copy-dirlinks --times --delete-after "--exclude=[Tt][Hh][Uu][Mm][Bb][Ss].[Dd][Bb]" %dryRun% %fromDirUnix% %toDirUnix% 
+  rsync --recursive --human-readable --progress --perms --update --inplace --fuzzy --copy-links --copy-dirlinks --times --delete-after "--exclude=[Tt][Hh][Uu][Mm][Bb][Ss].[Dd][Bb]" %dryRun% %fromDirUnix%/ %toDirUnix%/
   
   goto :eof
   
