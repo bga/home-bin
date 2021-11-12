@@ -53,7 +53,7 @@ for src in $(find "$srcDir" -type l); do
 	if [ ! -e "$destTarget" ]; then
 		echoErr "$destTarget" does not exist
 	else
-		lnRel "$dest" "$targetRel" $(lnRel_type $"$destTarget")
+		lnRel "$dest" "$targetRel" $(lnRel_type $"$destTarget") || true
 	fi
 done;
 
