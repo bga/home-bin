@@ -7,6 +7,8 @@ srcDir=${srcDir%/}
 destDir=$2
 destDir=${destDir%/} 
 
+pushd "$srcDir" &> /dev/null
+
 export MSYS=winsymlinks:nativestrict
 
 echoErr() {
@@ -54,3 +56,5 @@ for src in $(find "$srcDir" -type l); do
 		lnRel "$dest" "$targetRel" $(lnRel_type $"$destTarget")
 	fi
 done;
+
+popd &> /dev/null
