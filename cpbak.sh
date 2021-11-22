@@ -25,5 +25,6 @@ i=0
 while [ -e $(formatBakFilePath "$file" "$i") ]; do
 	let i=i+1
 done
-# echo $(formatBakFilePath "$file" $i)
-cp "$file" $(formatBakFilePath "$file" "$i")
+backupFile=$(formatBakFilePath "$file" $i)
+echo "$backupFile"
+cp "$file" "$backupFile"
