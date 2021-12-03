@@ -126,19 +126,26 @@ end
 
 Process_killByName("pwsafe.exe")
 
-taskBarPasswordLnkRenamedPath = "#{ taskBarPasswordLnkPath }.tmp"
-File.rename(taskBarPasswordLnkPath, taskBarPasswordLnkRenamedPath)
-transformFileData(taskBarPasswordLnkRenamedPath, "b") { |t|
-	t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes().toUtf16LE(), newPrivDriveLetter.toWindowsSlashes().toUtf16LE())
-}
-File.rename(taskBarPasswordLnkRenamedPath, taskBarPasswordLnkPath)
+if(File.exist?(taskBarPasswordLnkPath))
+	taskBarPasswordLnkRenamedPath = "#{ taskBarPasswordLnkPath }.tmp"
+	File.rename(taskBarPasswordLnkPath, taskBarPasswordLnkRenamedPath)
+	transformFileData(taskBarPasswordLnkRenamedPath, "b") { |t|
+		t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes().toUtf16LE(), newPrivDriveLetter.toWindowsSlashes().toUtf16LE())
+	}
+	File.rename(taskBarPasswordLnkRenamedPath, taskBarPasswordLnkPath)
+end
 
-transformFileData(passwordSafePwsafeCfgPath) { |t|
-	t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
-}
-transformFileData(thunderbirdProfilesIniPath) { |t|
-	t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
-}
+if(File.exist?(passwordSafePwsafeCfgPath))
+	transformFileData(passwordSafePwsafeCfgPath) { |t|
+		t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
+	}
+end
+
+if(File.exist?(thunderbirdProfilesIniPath))
+	transformFileData(thunderbirdProfilesIniPath) { |t|
+		t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
+	}
+end
 
 exit(1)
 puts oldPrivPath.subStringI(oldPrivDriveLetter, newPrivDriveLetter.toUnixSlashes())
