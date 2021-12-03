@@ -13,12 +13,14 @@ debug = nil
 
 operaPrivSymlink = "C:/Users/admin/AppData/Roaming/Opera/Opera/priv"
 thunderbirdProfilesIniPath = "C:/Users/admin/AppData/Roaming/Thunderbird/profiles.ini"
+keepassConfigXmlPath = "C:/Users/admin/AppData/Roaming/KeePass/KeePass.config.xml"
 taskBarPasswordLnkPath = "C:/Users/admin/AppData/Roaming/Microsoft/Internet Explorer/Quick Launch/User Pinned/TaskBar/Password Safe.lnk"
 passwordSafePwsafeCfgPath = "C:/Users/admin/AppData/Local/PasswordSafe/pwsafe.cfg"
 
 if(debug)
 	operaPrivSymlink = "C:/Users/admin/AppData/Local/Temp/xx/priv"
 	thunderbirdProfilesIniPath = "R:/profiles.ini"
+	keepassConfigXmlPath = "R:/KeePass.config.xml"
 	taskBarPasswordLnkPath = "R:/Password.lnk"
 	passwordSafePwsafeCfgPath = "R:/pwsafe.cfg"
 end
@@ -143,6 +145,12 @@ end
 
 if(File.exist?(thunderbirdProfilesIniPath))
 	transformFileData(thunderbirdProfilesIniPath) { |t|
+		t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
+	}
+end
+
+if(File.exist?(keepassConfigXmlPath))
+	transformFileData(keepassConfigXmlPath) { |t|
 		t.gsubStringI(oldPrivDriveLetter.toWindowsSlashes(), newPrivDriveLetter.toWindowsSlashes())
 	}
 end
