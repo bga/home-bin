@@ -19,6 +19,8 @@ storeExts='.jpg:.jpeg:.jpe:.gif:.png:.pdn:.zip:.rar:.7z:.gz:.apk:.a:.avi:.mp4:.o
 ignoreMasks='\*/Thumbs.db'
 splitSize=2G
 
+storeExts=${storeExts}:${storeExts^^}
+
 askPassword() {
 	# password=1234
 	local password=$(cloudPassword_2.sh backup)
