@@ -1,1 +1,1 @@
-call ruby.bat e:\bin\uploadImage.rb "%~1"
+call ruby.bat "%~dp0.\imgur-upload.rb" "%~1"
