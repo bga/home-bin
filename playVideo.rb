@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 urlOfLocalFilePath = ARGV[0]
 if(urlOfLocalFilePath.match(/^http(s)?\:/) == nil) 
   localFilePath = urlOfLocalFilePath

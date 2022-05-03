@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 i = 0
 isDryRun = false
 if(ARGV[i] == "--dry-run")

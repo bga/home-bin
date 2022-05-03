@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # require 'fileutils'
 find = "findUnix"
 fileName = File.join(Dir.pwd, ARGV[0])

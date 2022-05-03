@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # 7z {-p%%P} -r0 -y x %%A @%%LQMN
 # corrects extracting 
 

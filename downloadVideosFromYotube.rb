@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 linksFilePath = ARGV[0]
 outDir = ARGV[1]
 open(linksFilePath) { |linksFile|

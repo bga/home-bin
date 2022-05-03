@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 #
 # ps3Copy.rb Downloads\BCES0001\ f:\GAMES\ 
 #  => f:\GAMES\BCES0001\ or  f:\GAMES\_BCES0001\ if splitted files were

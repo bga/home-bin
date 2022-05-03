@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require "date"
 def my(*args)
 end

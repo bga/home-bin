@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 def debugPrint(*args) 
 	# puts *args
 end

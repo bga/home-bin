@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 port = ARGV[0]
 loop {
   activePorts = `netstat -a`

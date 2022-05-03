@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 table = { 
   "А" => "Α",
   "Б" => "Β",

@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 newPrivDriveLetter = nil
 oldPrivDriveLetter = nil
 if(ARGV.size == 2)

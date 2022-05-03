@@ -1,4 +1,4 @@
-#!/usr/local/bin/ruby -w
+#!/usr/bin/env ruby
 
 if(ARGV.index("--help") || ARGV.index("-h"))
   puts <<~HELP

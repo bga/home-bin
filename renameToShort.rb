@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 filePath = ARGV[0]
 dirName = File.dirname(filePath)
 baseName = File.basename(filePath)

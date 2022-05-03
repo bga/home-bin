@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # cat a.bin | hexToBin > a.hex
 isFirstLine = true
 while s = STDIN.read(80 / ("0xff,".size))
