@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 set -eu -o pipefail
 
 help="cmd jdupesExtraArgs dir1 dir2"

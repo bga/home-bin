@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eu -o pipefail
 
 # pdfCutPages from.pdf 2-3 [to.pdf || from_2-3.pdf]

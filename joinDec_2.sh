@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eu -o pipefail
 
 # joinDec_2.sh image2021-07-24-15_06_23.split | bsdtar -xOf - 'e/protected.truecrypt' | cp-blocks --stat --progress - /e/protected.truecrypt

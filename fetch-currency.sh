@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eu -o pipefail
 
 currency=${1:-USD}

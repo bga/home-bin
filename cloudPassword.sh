@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -eu -o pipefail
 
 # outputStream=" 1>&2"
