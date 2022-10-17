@@ -17,7 +17,7 @@ gccOptionsString = ((ARGV[1 ... ARGV.size] or [])
 )
 require "tmpdir"
 tmpDirPath = Dir.mktmpdir
-prefix = `node #{ currentDrive }/dependencyCopy/dependencyCopy.js #{ fileName } #{ (tmpDirPath + "/").gsub(/\//, "\\") }`
+prefix = `node #{ currentDrive }/dependencyCopy/dependencyCopy.app.js #{ fileName } #{ (tmpDirPath + "/").gsub(/\//, "\\") }`
 files = `#{ find } "#{ tmpDirPath }" -name "*.c" -or -name "*.cpp" -or -name "*.h"`.split("\n")
 files.each {
   |file|
